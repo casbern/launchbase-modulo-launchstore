@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 
+<html>  
 <head>
   {% block head %}
   <title>Launchstore</title>
@@ -9,11 +10,11 @@
   <link href="/styles.css" rel="stylesheet" type="text/css" />
 </head>
 
-  <body>
-    {% include "parts/header.njk" %}
+<body>
+  {% include "parts/header.njk" %}
 
-    {% block content %}{% endblock %}
+  {% block content %}{% endblock %}
 
-    {% include "parts/footer.njk" %}
-  </body>
+  {% include "parts/footer.njk" %}
+</body>
 </html>
