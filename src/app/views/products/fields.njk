@@ -40,8 +40,10 @@
           type="text"
           name="price"
           placeholder="Preço do produto"
-          value="{{ product.price }}">
-          {# Faremos uma máscara de dinheiro/reais #}
+          value="{{ product.price }}"
+          
+          {# Máscara de dinheiro/reais #}
+          onkeydown="Mask.apply(this,'formatBRL')">
   </div>
   {% if product.old_price %}
     <input type="hidden" name="old_price" value={{product.old_price}}>
@@ -49,17 +51,17 @@
 </div>
 
 <div class="item">
-  <div>Quantidade</div>
+  <div>Quantidade</div> 
   <div>
     <input 
         type="number"
         name="quantity"
         placeholder="Estoque disponível"
-        value="{{ product.name }}">
+        value="{{ product.quantity }}">
   </div>
 </div>
 
-{% if product.status %}
+{% if (product.status == '1') or (product.status == '0') %}
 <div class="item">
   <div>Disponível</div>
   <div>

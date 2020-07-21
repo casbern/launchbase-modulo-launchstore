@@ -3,7 +3,7 @@
 :root {
   --background-color: #f9f9f9;
   --primary-color: #fd951f;
-  --secondary-color: #1fd4fd;
+  --secondary-color: #1f83fd;
 }
 
 *{
@@ -55,6 +55,22 @@ html, body {
 
 .button:hover {
   background-color: #d7780b;
+}
+
+.button.edit {
+  background-color: var(--secondary-color);
+}
+
+.button.delete {
+  background-color: lightgray;
+}
+
+.button.edit:hover {
+  background-color: #065ac1;
+}
+
+.button.delete:hover {
+  background-color: rgba(223, 62, 62);
 }
 
 /* HEADER */
@@ -147,6 +163,10 @@ section.form .header h3 {
   margin-bottom: 16px;
 }
 
+form .fields {
+  margin-bottom: 64px;
+}
+
 form .item {
   margin-bottom: 16px;
 }
@@ -190,6 +210,20 @@ form .item textarea {
   min-height: 150px;
 }
 
-form .fields {
-  margin-bottom: 64px;
+form .item span {
+  padding: 8px 16px;
+  background-color: var(--primary-color);
+  border-radius: 16px;
+  color: white;
+  margin-right: 4px;
+  margin-top: 8px;
+  display: inline-block;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12px;
 }
+
+input[type='radio'] {
+  margin-right: 4px;
+}
+
