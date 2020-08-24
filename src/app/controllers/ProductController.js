@@ -114,7 +114,7 @@ module.exports = {
       const lastIndex = removedFiles.length - 1
       removedFiles.splice(lastIndex, 1) // Retorna [1,2,3]
 
-      const removedFilesPromise = removedFiles.map(file => File.delete(id))
+      const removedFilesPromise = removedFiles.map(file => File.delete(file))
 
       await Promise.all(removedFilesPromise)
     }
