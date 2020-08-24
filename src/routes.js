@@ -10,6 +10,8 @@ routes.get('/', function(req, res) {
 routes.get('/products/create', ProductController.create)
 routes.post('/products', multer.array('photos', 6), ProductController.post)
 
+routes.get('/products/:id', ProductController.show)
+
 routes.get('/products/:id/edit', ProductController.edit)
 routes.put('/products', multer.array('photos', 6), ProductController.put)
 
