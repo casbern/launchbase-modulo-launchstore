@@ -8,9 +8,15 @@
   <div class="items">
     {% for product in products %}
       <div class="product">
-        <div class="image"
-          style:"background: url({{"
+        <div 
+          class="image"
+          style="background: url({{product.img if product.img else '//placehold.it/500x500?text=Produto sem imagem'}})"
         >
+
+        <p>{{product.price}}</p>
+        <h4>{{product.name}}</h4>
+
+        <a href="/products/{{product.id}}" class="button">Ver Produto</a>
 
         </div>
       </div>
